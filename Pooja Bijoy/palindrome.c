@@ -2,24 +2,18 @@
 #include<math.h>
 int main()
 {
-    int n,d,m;
-    d=0;
+    int n,m;
     int s=0;
     printf("Enter the number");
     scanf("%d",&n);
     m=n;
     for(m;m!=0;m=m/10)
     {
-        d++;
-    }
-    m=n;
-    for(m;m!=0;m=m/10)
-    {
-        s=s+pow((m%10),d);
+        s=(s*10)+(m%10);
     }
     if(s==n)
-    printf("%d is an armstrong number",n);
+    printf("%d is a palindrome",n);
     else
-    printf("%d is not armstrong number",n);
+    printf("%d is not a palindrome",n);
     return 0;
 }
